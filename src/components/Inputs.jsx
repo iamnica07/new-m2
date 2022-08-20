@@ -31,6 +31,11 @@ const Inputs = ({setQuery, setUnits, units}) => {
     }
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      if(city !== '') setQuery({q: city})
+    }
+  }
 
   return (
     <div className='flex flex-row justify-center my-6'>
@@ -49,7 +54,9 @@ const Inputs = ({setQuery, setUnits, units}) => {
             <UilLocationPoint 
             size={25} 
             className="text-white cursor-pointer transition ease-out hover:scale-125"
-            onClick={handleLocationClick}/>
+            onClick={handleLocationClick}
+            onKeyDown={handleKeyDown}
+            />
         </div>
 
         <div className='flex flex-row w-1/4 items-center justify-center'>

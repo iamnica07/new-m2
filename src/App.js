@@ -7,6 +7,7 @@ import getFormattedWeatherData from "./services/weatherService";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import './App.css';
 
 const App = () => {
   const [query,setQuery] = useState({q: 'manila'})
@@ -38,7 +39,9 @@ const App = () => {
 
 
   return (
-    <div className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br  h-fit shadow-xl shadow-gray-400 ${formatBackground()}`}>
+    <>
+
+    <div className={`mx-auto max-w-full-md py-5 px-32 bg-gradient-to-br h-screen shadow-xl shadow-gray-400 ${formatBackground()}`}>
       <TopButtons setQuery={setQuery}/>
       <Inputs setQuery={setQuery} units={units} setUnits={setUnits}/>
       {weather && (
@@ -51,7 +54,10 @@ const App = () => {
         </>
       )}
       <ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
+      
     </div>
+    
+    </>
   )
 }
 
