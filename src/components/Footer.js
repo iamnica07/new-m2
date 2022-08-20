@@ -41,10 +41,10 @@ function Footers() {
                             </li>
                             <li>
                                 Danica Grace Tagayon
-                            </li>
+                            </li><br></br>
                             <li>
                                 Paul Gilbuena
-                            </li>
+                            </li><br></br>
                             <li>
                                 Bryant Rosillo
                             </li>
